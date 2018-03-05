@@ -23,14 +23,14 @@ namespace haddley
 
     void Method(const FunctionCallbackInfo<Value> &args)
     {
+        Isolate * isolate = args.GetIsolate();
 
         int n = (int)(unsigned)args[0]->NumberValue();
 
         unsigned long value = fac(n);
 
-        Local<Uint32> num = Uint32::New(value);
+        Local<Uint32> num = Uint32::New(isolate,value);
         args.GetReturnValue().Set(num);
-
     }
 
     void init(Local<Object> exports)
