@@ -26,7 +26,8 @@ namespace haddley
 
         unsigned long long value = fac(n);
 
-        args.GetReturnValue().Set(value);
+        Local<Number> num = Number::New(isolate, value);
+        args.GetReturnValue().Set(num);
 
     }
 
