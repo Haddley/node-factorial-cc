@@ -1,6 +1,6 @@
 {
   "name": "node-factorial-cc",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Calculate factorial of given number using C++",
   "main": "index.js",
   "scripts": {
