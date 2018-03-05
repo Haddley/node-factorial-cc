@@ -29,8 +29,11 @@ namespace haddley
 
         unsigned long value = fac(n);
 
-        Local<Uint32> num = Uint32::New(isolate,value);
-        args.GetReturnValue().Set(num);
+        Local<Number> retval = Number::New(isolate, value);
+        
+        args.GetReturnValue().Set(retval);
+
+
     }
 
     void init(Local<Object> exports)
