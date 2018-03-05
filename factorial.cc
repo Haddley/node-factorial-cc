@@ -24,9 +24,12 @@ namespace haddley
 
         int n = (int)(unsigned)args[0]->NumberValue();
 
-        long value = fac(n);
+        unsigned long long value = fac(n);
 
-        args.GetReturnValue().Set(value);
+        Local<Number> retval = Uint32::New(isolate, value);
+        
+        args.GetReturnValue().Set(retval);
+
     }
 
     void init(Local<Object> exports)
