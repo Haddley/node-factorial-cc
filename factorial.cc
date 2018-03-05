@@ -11,7 +11,7 @@ namespace haddley
     using v8::String;
     using v8::Value;
 
-    long int fac(int n)
+    unsigned long long fac(int n)
     {
         if (n >= 1)
             return n * fac(n - 1);
