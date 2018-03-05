@@ -13,7 +13,7 @@ namespace haddley
     using v8::Number;
     using v8::Uint32;
 
-    unsigned long fac(int n)
+    double fac(int n)
     {
         if (n >= 1)
             return n * fac(n - 1);
@@ -27,7 +27,7 @@ namespace haddley
 
         int n = (int)(unsigned)args[0]->NumberValue();
 
-        unsigned long value = fac(n);
+        double value = fac(n);
 
         Local<Number> retval = Number::New(isolate, value);
         
